@@ -1,8 +1,5 @@
 package com.techApp;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -20,7 +17,9 @@ public class TechAppApplication {
 /* O Spring é um framework java open source para facilitar o desenvolvimento de aplicações corporativas, 
  baseado nos padrões de projeto de inversão de controle e injeção de dependência */
 
-// Projeto App Tech -->  Criação de um servidor web para um aplicativo */
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+/* Projeto App Tech -->  Criação de um servidor web para um aplicativo */
 
 // Dependências : Spring web --> responsável por criar um ambiente web para o funcionamento do servidor;
 
@@ -29,7 +28,9 @@ public class TechAppApplication {
 /* DevTools --> serve para rodar a aplicação em looping a cada atualização feita*/
 /*  */
 
-// Construção do projeto em ordem :
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+/* Construção do projeto em ordem :
 
 // Application.properties --> configurar os dados url para rodar a aplicação vinculando com o banco de dados:
  
@@ -45,26 +46,39 @@ public class TechAppApplication {
 			 	
    spring.jpa.show-sql=true --> anotar no console as alterações feitas no aplicação spring */
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
 /* Model, Domain ou Entity --> são as entidades do banco de dados, classes e atributos que vão representar tabelas e colunas do banco */
 
-/* @Entity --> cria a tabela no bd e o @Table --> serve para renomear a tabela */ 
+// @Entity --> cria a tabela no bd e o @Table --> serve para renomear a tabela
 // javaxpersistense --> avisa o que precisa escrever dentro do java para que seja transformado dentro do banco.
-/* @GeneratedValue(strategy = GenerationType.IDENTITY) --> comando para auto incrementação.
+// @GeneratedValue(strategy = GenerationType.IDENTITY) --> comando para auto incrementação.
 // @Id --> o Hibernate vai entender que é uma chave primária 
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+/* Repository --> Interface que implementa todos os métodos CRUD */
+
+// @Repository --> uma boa prática, um indicador que mostra que a classe vai trabalhar com persistência de dados.
+
+//Http Methods --> Métodos CRUD --> GET,POST,PUT,DELETE (pegar,postar ou colocar, atualizar e deletar)
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+/* Controller ou Resource --> controlador que recebe requisições dos verbos CRUD do repositório e retorna responses para aquele determinado usuário que realiza solicitações no servidor */
+
+// @RestController --> indica para o spring que o controlador está apto para receber requisições e devolver responses(respostas)
+// @RequestMapping --> serve para mapear o endereço do endpoint 
+// endpoint --> ponto final da aplicação, é daí em diante que é solicitado os métodos CRUD
+// @Autowired --> injeção de dependência do repositório dentro do controller habilitando assim o uso dos métodos CRUD.
+// @RequestBody --> serve para pegar dentro do corpo da requisição o método que está sendo passado por linha de código.
 
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
-
-
-/* Repository */
-/* Controller ou Resource */
-/*  */
-/*  */
-/*  */
 
 
 // Status Code 
 // Api Rest 
-// 
+// Http Methods --> Métodos CRUD --> GET,POST,PUT,DELETE (pegar,postar ou colocar, atualizar e deletar)
 
