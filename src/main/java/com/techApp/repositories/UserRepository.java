@@ -1,5 +1,7 @@
 package com.techApp.repositories;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -7,6 +9,11 @@ import com.techApp.models.UserModel;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserModel,Long> {
+
+	Optional<UserModel> findByEmail(String emailUser);
+	// query method , utiliza a classe JpaRepository e sobreescreve o método findBy utilizando uma coluna específica.
+	// escrever da mesma forma que tem na Model só que em camalCase
+	
 
 }
 
