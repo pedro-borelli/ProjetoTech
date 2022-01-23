@@ -72,6 +72,14 @@ public class TechAppApplication {
 // endpoint --> ponto final da aplicação, é daí em diante que é solicitado os métodos CRUD
 // @Autowired --> injeção de dependência do repositório dentro do controller habilitando assim o uso dos métodos CRUD.
 // @RequestBody --> serve para pegar dentro do corpo da requisição o método que está sendo passado por linha de código.
+// @PathVariable --> é obter algum espaço reservado no URI (o Spring chama-se Modelo de URI)
+// @ResponseEntity --> serve para passar uma resposta ou retorno para o usuário
+// map é para mapear, findById --> buscar por ID, status, httpStatus, ok ou orelsethow são métodos de responsividade para 
+// requisições que vão ser feitas pelo usuáro no sistema.
+// Optional --> uma biblioteca é como uma resposta if else.
+// isPresent --> para confirmar se algo é existente e isEmpty --> se algo é ausente ou vazio na requisição.
+// findByContaining --> query method para pegar alguma requisição pela variável declarada como um nome ou email.
+
 
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
