@@ -2,6 +2,8 @@ package com.techApp.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,7 +45,7 @@ public class UserController {
 	}
 	
 	@PostMapping("/save") // /save --> rota para o verbo POST fazer a postagem
-	public UserModel save(@RequestBody UserModel newUser) {
+	public UserModel save( @Valid @RequestBody UserModel newUser) {
 		return repository.save(newUser);
 	}
 	
@@ -52,7 +54,7 @@ public class UserController {
 	// JSON --> transporte de dados com várias linguagens em comum
 	
 	@PutMapping("/update") // /update --> rota para o verbo PUT atualizar a requisição
-	public UserModel update(@RequestBody UserModel newUser) {
+	public UserModel update(@Valid @RequestBody UserModel newUser) {
 		return repository.save(newUser);
 	}
 	

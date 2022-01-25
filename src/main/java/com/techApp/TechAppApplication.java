@@ -26,7 +26,7 @@ public class TechAppApplication {
 /* Spring Data Jpa --> responsável por passar as diretrizes que transformam os dados java em tabela no banco de dados */
 /* MySQL Driver --> cria a conexão pelo driver do banco de dados específico que esta sendo utilizado no projeto*/
 /* DevTools --> serve para rodar a aplicação em looping a cada atualização feita*/
-/*  */
+/* Validation --> biblioteca que serve para validar os atributos e métodos */
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -54,6 +54,12 @@ public class TechAppApplication {
 // javaxpersistense --> avisa o que precisa escrever dentro do java para que seja transformado dentro do banco.
 // @GeneratedValue(strategy = GenerationType.IDENTITY) --> comando para auto incrementação.
 // @Id --> o Hibernate vai entender que é uma chave primária 
+// @NotNull --> não permite valor nulo, serve para validar a entrada de algum dado, porém  o campo pode estar vazio
+// @NotBlank --> serve para validar algum dado assim como o nulo porém os campos precisam estar preenchidos com algum dado.
+// @Valid --> pega o corpo da requisição para validar
+// @Email --> serve para validar o email no banco de dados
+// @Size --> tamanho de caracteres para validar o campo
+// @JoinColumn --> serve para juntar ou trazer um columa como a chave estrangeira
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -79,7 +85,6 @@ public class TechAppApplication {
 // Optional --> uma biblioteca é como uma resposta if else.
 // isPresent --> para confirmar se algo é existente e isEmpty --> se algo é ausente ou vazio na requisição.
 // findByContaining --> query method para pegar alguma requisição pela variável declarada como um nome ou email.
-
 
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
